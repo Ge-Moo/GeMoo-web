@@ -1,0 +1,9 @@
+{
+   "verbose": true,
+   "ext": "ts, js, json, njk, html, css",
+   "watch": ["src", "views", "public"],
+   "execMap": {
+     "ts": "ts-node"
+   }
+ }
+ 
