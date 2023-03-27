@@ -1,0 +1,34 @@
+{
+  "Customer Segment" : [
+    "Pemain Game 10 - 20 Tahun"  
+  ],
+  "Value Propositions" : {
+    "Memberikan Hadiah Pada Teman" : "Hadiah akan di kirim otomatis dengan jadwal yang di tentukan", 
+    "Item Pasti Masuk" : "Item yang gagal masuk akan di asuransikan pada client", 
+    "Diskon Spesial Hari Raya" : "Setiap Hari raya akan ada diskon khusus"
+  },
+  "Channel" : [
+    "Website Gemoo", "Akun Media Sosial Gemoo"
+  ], 
+  "Custommer Relationship" : [
+    "Menjadi Member Di Website Geemo"
+  ], 
+  "Revenue Streams" : [
+    "Penjualan Item Game Online"
+  ], 
+  "Key Activites" : [
+    "Mengelola Website", 
+    "Melakukan Recovery pada transaksi yang gagal"
+  ],
+  "Key Resource" : [
+    "Programmer"
+  ], 
+  "Key Patners" : [
+    "apigames.id"
+  ], 
+  "Cost Stucture" : [
+    "Server",
+    "Hosting",
+    "Api Key"
+  ]
+}
