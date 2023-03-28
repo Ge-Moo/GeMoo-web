@@ -11,33 +11,39 @@ datasource db {
 }
 
 model Member {
-  id Int @id @default(autoincrement())
-  fullname String
-  username String 
-  email String 
-  password String 
-  whatsappNumber String 
-  saldo Int
+  id             Int           @id @default(autoincrement())
+  fullname       String
+  username       String
+  email          String
+  password       String
+  whatsappNumber String
+  Transaction    Transaction[]
+  Gift           Gift[]
 }
 
 model Transaction {
-  id Int  @id @default(autoincrement())
-  memberId Int 
-  member Member @relation(fields: [memberId], references: [id])
-  orderId Int 
-  price Int 
-  gameUsername String 
-  uuidGame Int 
-  status PaymentStatus 
+  id           Int     @id @default(autoincrement())
+  memberId     Int
+  member       Member  @relation(fields: [memberId], references: [id])
+  product      Product @relation(fields: [productId], references: [id])
+  productId    Int
+  orderId      Int
+  price        Int
+  gameUsername String
+  uuidGame     Int
+}
+
+model Product {
+  id          Int           @id @default(autoincrement())
+  code        String
+  Gift        Gift[]
+  Transaction Transaction[]
 }
 
 model Gift {
-
-}
-
-enum PaymentStatus {
-  "success" 
-  "failed"
-  "pending"
-  "unexpected"
+  id        Int     @id @default(autoincrement())
+  member    Member  @relation(fields: [memberId], references: [id])
+  memberId  Int
+  product   Product @relation(fields: [productId], references: [id])
+  productId Int
 }
