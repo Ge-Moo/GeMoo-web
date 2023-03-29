@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="id">
+
+<head>
+{% include '_partials/head.njk' %}
+</head>
+
+<body class="bg-[#1F2728] font-poppins">
+   <header>
+      {% include '_partials/navbar.njk' %}
+   </header>
+   <div>
+      {% block content %}
+      {% endblock %}
+   </div>
+   <footer>
+      {% include '_partials/footer.njk' %}
+   </footer>
+</body>
+_partials
+
+</html>
