@@ -1,34 +1,23 @@
 name: Deploy Laravel ke vps kita 🥶
-
 on:
   push:
     branches:
       - main
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
     steps:
-      - run: ls -la
-      
       - name: Checkout code
-        uses: actions/checkout@main
-
-      - run: sudo apt install rsync
+        uses: actions/checkout@v2
       
-      - name: Deploy theme on server
-        id: deploy_theme
-        uses: Pendect/action-rsyncer@v1.1.0
-        env:
-          SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
         with:
-          flags: '-avc --delete'
-          src: '/'
-          dest: 'root@"${{secrets.SERVER_IP}}":/var/www/html'
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+      
+      - name: Adding Known Hosts
+        run: ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
 
-      - name: Restart web server 🌐
-        run: ssh 'root@"${{secrets.SERVER_IP}}"' "sudo systemctl restart apache2"
-
-      - name: Display status from deploy
-        run: echo "${{ steps.deploy.outputs.status }}"
+      - name: Deploy with rsync
+        run: rsync -avz ./ root@${{ secrets.SERVER_IP }}:/var/www/html
