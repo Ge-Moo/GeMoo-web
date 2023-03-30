@@ -46,10 +46,11 @@
                       <div class="mx-5">
                         <img loading="lazy" src="{{ asset('icons/search.svg') }}" alt="image post" class="w-6">    
                       </div>
-                      <button type="button" class="flex" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                      <!-- <button type="button" class="flex" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                         <span class="sr-only">Open user menu</span>
                         <p class="text-center rounded-lg bg-[#40CE9B] w-20 text-sm py-1 font-semibold">Daftar</p>
-                      </button>
+                      </button> -->
+                      <a href="/login" class="text-center rounded-lg bg-[#40CE9B] w-20 text-sm py-1 font-semibold">Login</a>
                     </div>
           
                   
