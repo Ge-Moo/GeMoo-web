@@ -29,5 +29,5 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: root
           password: ${{ secrets.PASSWORD }}
-          port: 20
+          port: 22
           script: cd /var/www/html && composer update && composer install
