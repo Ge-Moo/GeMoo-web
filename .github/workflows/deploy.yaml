@@ -21,3 +21,7 @@ jobs:
 
       - name: Deploy with rsync
         run: rsync -avz ./ root@${{ secrets.SERVER_IP }}:/var/www/html
+
+      # Deploy
+      - name: Php krinjj
+        run: cd /var/www/html && composer update && composer install
