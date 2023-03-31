@@ -30,8 +30,4 @@ jobs:
           username: root
           password: ${{ secrets.PASSWORD }}
           port: 2222
-        # script: whoami
-      
-      # Command 01
-      - name: Php krinjj
-        run: cd /var/www/html && composer update && composer install
+          script: cd /var/www/html && composer update && composer install
