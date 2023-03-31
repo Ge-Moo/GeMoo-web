@@ -1,0 +1,11 @@
+<x-main>
+    <section>
+        <x-home.headline></x-headline>
+    </section>
+    <section>
+        <x-home.feature></x-feature>
+    </section>
+    <section>
+        <x-home.populer></x-populer>
+    </section>
+</x-main>
