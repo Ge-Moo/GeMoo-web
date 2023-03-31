@@ -22,6 +22,16 @@ jobs:
       - name: Deploy with rsync
         run: rsync -avz ./ root@${{ secrets.SERVER_IP }}:/var/www/html
 
-      # Deploy
+      # Execute command ke VPS
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: root
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+        # script: whoami
+      
+      # Command 01
       - name: Php krinjj
         run: cd /var/www/html && composer update && composer install
