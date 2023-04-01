@@ -8,8 +8,11 @@
     @vite('resources/css/app.css')
 </head>
 
-<body>
-    @yield('content')
+<body class="bg-[#1F2728]">
+    <header>
+        <x-navbar></x-navbar>
+    </header>
+    {{ $slot }}
 </body>
 
 </html>
