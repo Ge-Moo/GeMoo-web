@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,4 +24,8 @@ Route::get('/login', function () {
 
 Route::get('/register', function () {
     return view('auth.register');
+});
+
+Route::group(['namespace' => 'User'],function(){
+  Route::post('/register',[UserController::class,'insertMember'])->name('insertMember');
 });
