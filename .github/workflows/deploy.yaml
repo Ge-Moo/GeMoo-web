@@ -30,4 +30,4 @@ jobs:
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
-          script: cd /var/www/html && rm * && composer update && composer install && pnpm i && pnpm build
+          script: cd /var/www/html && composer update && composer install && pnpm i && pnpm build
