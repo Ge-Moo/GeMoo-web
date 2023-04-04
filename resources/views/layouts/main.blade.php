@@ -8,11 +8,12 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="bg-[#1F2728]">
+<body class="bg-slate-950 text-slate-50 font-rubik">
     <header>
         <x-navbar></x-navbar>
     </header>
     {{ $slot }}
+    <x-footer></x-footer>
 </body>
 
 </html>
