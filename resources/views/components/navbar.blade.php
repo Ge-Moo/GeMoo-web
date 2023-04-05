@@ -1,4 +1,4 @@
-<nav class="flex flex-row py-6 px-14 bg-slate-900">
+<nav class="flex flex-row py-6 px-14 bg-slate-900 fixed w-screen top-0 bg-opacity-75 backdrop-blur z-50 border-b border-slate-700">
     <a href="/" class="group cursor-pointer" title="Back to Home">
         <img alt="BGeen Logo" src="{{ asset('img/icons/BGeen.svg') }}" class="w-[120px] h-auto group-hover:grayscale" />
     </a>

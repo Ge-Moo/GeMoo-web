@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>My test page</title>
+    <title>BGeen - Top Up sepuasnya</title>
     @vite('resources/css/app.css')
 </head>
 
@@ -12,7 +12,9 @@
     <header>
         <x-navbar></x-navbar>
     </header>
-    {{ $slot }}
+    <main class="mt-20">
+        {{ $slot }}
+    </main>
     <x-footer></x-footer>
 </body>
 
